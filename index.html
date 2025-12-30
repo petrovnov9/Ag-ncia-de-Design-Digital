@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Criativa Web</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logo da Agência Criativa Web" width="150" height="50">
+            </div>
+            <input type="checkbox" id="menu-toggle" aria-label="Alternar menu de navegação">
+            <label for="menu-toggle" class="hamburger" aria-label="Abrir menu de navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section id="home" class="hero">
+            <img src="banner-480w.jpg" srcset="banner-480w.jpg 480w, banner-768w.jpg 768w, banner-1200w.jpg 1200w, banner-1920w.jpg 1920w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" alt="Banner da Agência Criativa Web" class="hero-image">
+            <div class="hero-overlay">
+                <h1>Bem-vindo à Agência Criativa Web</h1>
+                <p>Transformamos ideias em experiências digitais incríveis.</p>
+                <a href="#contato" class="cta-button">Entre em Contato</a>
+            </div>
+        </section>
+        <section id="sobre">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <div class="sobre-content">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="sobre-mobile.jpg">
+                        <source media="(min-width: 769px)" srcset="sobre-desktop.jpg">
+                        <img src="sobre-desktop.jpg" alt="Equipe da Agência Criativa Web" class="sobre-image">
+                    </picture>
+                    <div class="sobre-text">
+                        <p>Somos uma agência especializada em desenvolvimento web, design criativo e marketing digital. Nossa missão é ajudar empresas a se destacarem no mundo online com soluções inovadoras e personalizadas.</p>
+                        <p>Com anos de experiência, combinamos criatividade e tecnologia para entregar projetos de alta qualidade que geram resultados reais para nossos clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="servicos-grid">
+                    <div class="servico-item">
+                        <h3>Design de Websites</h3>
+                        <p>Criamos sites responsivos e atraentes que capturam a essência da sua marca.</p>
+                    </div>
+                    <div class="servico-item">
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Desenvolvemos aplicações web robustas usando as melhores práticas e tecnologias modernas.</p>
+                    </div>
+                    <div class="servico-item">
+                        <h3>Marketing Digital</h3>
+                        <p>Estratégias de SEO, redes sociais e anúncios para aumentar sua visibilidade online.</p>
+                    </div>
+                    <div class="servico-item">
+                        <h3>Consultoria</h3>
+                        <p>Orientação especializada para otimizar seus processos digitais e alcançar seus objetivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="depoimentos">
+            <div class="container">
+                <h2>Depoimentos</h2>
+                <div class="depoimentos-list">
+                    <blockquote>
+                        <p>"A Agência Criativa Web transformou nosso site e aumentou nossas vendas significativamente. Recomendo!"</p>
+                        <cite>João Silva, CEO da Empresa XYZ</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Profissionais dedicados e criativos. Nosso projeto foi entregue no prazo e superou expectativas."</p>
+                        <cite>Maria Oliveira, Diretora de Marketing</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <form action="#" method="post" class="contato-form">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required aria-describedby="nome-help">
+                        <span id="nome-help" class="sr-only">Digite seu nome completo</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required aria-describedby="email-help">
+                        <span id="email-help" class="sr-only">Digite um endereço de e-mail válido</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required aria-describedby="mensagem-help"></textarea>
+                        <span id="mensagem-help" class="sr-only">Digite sua mensagem</span>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Agência Criativa Web. Todos os direitos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        menuToggle.addEventListener('change', () => {
+            navMenu.setAttribute('aria-expanded', menuToggle.checked);
+        });
+    </script>
+</body>
+</html>
