@@ -7,129 +7,147 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
-    <header>
-        <nav>
-            <div class="logo">
+    <a href="#main" class="u-skip-link">Pular para o conteúdo principal</a>
+
+    <header class="site-header" id="home">
+        <nav class="nav u-container">
+            <div class="nav__brand">
                 <img src="logo.png" alt="Logo da Agência Criativa Web" width="150" height="50">
             </div>
-            <input type="checkbox" id="menu-toggle" aria-label="Alternar menu de navegação">
-            <label for="menu-toggle" class="hamburger" aria-label="Abrir menu de navegação">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <input type="checkbox" id="nav-toggle" class="nav__toggle u-visually-hidden" aria-label="Alternar menu de navegação">
+            <label for="nav-toggle" class="nav__hamburger" aria-label="Abrir menu de navegação">
+                <span class="nav__hamburger-bar"></span>
+                <span class="nav__hamburger-bar"></span>
+                <span class="nav__hamburger-bar"></span>
             </label>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
+
+            <ul class="nav__list" aria-expanded="false">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#sobre" class="nav__link">Sobre Nós</a></li>
+                <li class="nav__item"><a href="#servicos" class="nav__link">Serviços</a></li>
+                <li class="nav__item"><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+                <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
             </ul>
         </nav>
     </header>
+
     <main id="main">
-        <section id="home" class="hero">
-            <img src="banner-480w.jpg" srcset="banner-480w.jpg 480w, banner-768w.jpg 768w, banner-1200w.jpg 1200w, banner-1920w.jpg 1920w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" alt="Banner da Agência Criativa Web" class="hero-image">
-            <div class="hero-overlay">
-                <h1>Bem-vindo à Agência Criativa Web</h1>
-                <p>Transformamos ideias em experiências digitais incríveis.</p>
-                <a href="#contato" class="cta-button">Entre em Contato</a>
+        <section class="hero">
+            <img
+                class="hero__image"
+                src="banner-480w.jpg"
+                srcset="banner-480w.jpg 480w, banner-768w.jpg 768w, banner-1200w.jpg 1200w, banner-1920w.jpg 1920w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                alt="Banner da Agência Criativa Web">
+            <div class="hero__overlay">
+                <h1 class="hero__title">Bem-vindo à Agência Criativa Web</h1>
+                <p class="hero__subtitle">Transformamos ideias em experiências digitais incríveis.</p>
+                <a href="#contato" class="btn btn--primary">Entre em Contato</a>
             </div>
         </section>
-        <section id="sobre">
-            <div class="container">
-                <h2>Sobre Nós</h2>
-                <div class="sobre-content">
-                    <picture>
+
+        <section id="sobre" class="u-section">
+            <div class="u-container">
+                <h2 class="section__title">Sobre Nós</h2>
+                <div class="about__content">
+                    <picture class="about__image">
                         <source media="(max-width: 768px)" srcset="sobre-mobile.jpg">
                         <source media="(min-width: 769px)" srcset="sobre-desktop.jpg">
-                        <img src="sobre-desktop.jpg" alt="Equipe da Agência Criativa Web" class="sobre-image">
+                        <img src="sobre-desktop.jpg" alt="Equipe da Agência Criativa Web">
                     </picture>
-                    <div class="sobre-text">
+                    <div class="about__text">
                         <p>Somos uma agência especializada em desenvolvimento web, design criativo e marketing digital. Nossa missão é ajudar empresas a se destacarem no mundo online com soluções inovadoras e personalizadas.</p>
                         <p>Com anos de experiência, combinamos criatividade e tecnologia para entregar projetos de alta qualidade que geram resultados reais para nossos clientes.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="servicos">
-            <div class="container">
-                <h2>Nossos Serviços</h2>
-                <div class="servicos-grid">
-                    <div class="servico-item">
-                        <h3>Design de Websites</h3>
+
+        <section id="servicos" class="u-section">
+            <div class="u-container">
+                <h2 class="section__title">Nossos Serviços</h2>
+                <div class="services__grid">
+                    <article class="card card--center services__card">
+                        <h3 class="services__card-title">Design de Websites</h3>
                         <p>Criamos sites responsivos e atraentes que capturam a essência da sua marca.</p>
-                    </div>
-                    <div class="servico-item">
-                        <h3>Desenvolvimento Web</h3>
+                    </article>
+                    <article class="card card--center services__card">
+                        <h3 class="services__card-title">Desenvolvimento Web</h3>
                         <p>Desenvolvemos aplicações web robustas usando as melhores práticas e tecnologias modernas.</p>
-                    </div>
-                    <div class="servico-item">
-                        <h3>Marketing Digital</h3>
+                    </article>
+                    <article class="card card--center services__card">
+                        <h3 class="services__card-title">Marketing Digital</h3>
                         <p>Estratégias de SEO, redes sociais e anúncios para aumentar sua visibilidade online.</p>
-                    </div>
-                    <div class="servico-item">
-                        <h3>Consultoria</h3>
+                    </article>
+                    <article class="card card--center services__card">
+                        <h3 class="services__card-title">Consultoria</h3>
                         <p>Orientação especializada para otimizar seus processos digitais e alcançar seus objetivos.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
-        <section id="depoimentos">
-            <div class="container">
-                <h2>Depoimentos</h2>
-                <div class="depoimentos-list">
-                    <blockquote>
+
+        <section id="depoimentos" class="u-section">
+            <div class="u-container">
+                <h2 class="section__title">Depoimentos</h2>
+                <div class="testimonials__list">
+                    <blockquote class="testimonial">
                         <p>"A Agência Criativa Web transformou nosso site e aumentou nossas vendas significativamente. Recomendo!"</p>
-                        <cite>João Silva, CEO da Empresa XYZ</cite>
+                        <cite class="testimonial__cite">João Silva, CEO da Empresa XYZ</cite>
                     </blockquote>
-                    <blockquote>
+                    <blockquote class="testimonial">
                         <p>"Profissionais dedicados e criativos. Nosso projeto foi entregue no prazo e superou expectativas."</p>
-                        <cite>Maria Oliveira, Diretora de Marketing</cite>
+                        <cite class="testimonial__cite">Maria Oliveira, Diretora de Marketing</cite>
                     </blockquote>
                 </div>
             </div>
         </section>
-        <section id="contato">
-            <div class="container">
-                <h2>Entre em Contato</h2>
-                <form action="#" method="post" class="contato-form">
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" required aria-describedby="nome-help">
-                        <span id="nome-help" class="sr-only">Digite seu nome completo</span>
+
+        <section id="contato" class="u-section">
+            <div class="u-container">
+                <h2 class="section__title">Entre em Contato</h2>
+                <form action="#" method="post" class="form contact__form">
+                    <div class="form__group">
+                        <label for="nome" class="form__label">Nome</label>
+                        <input type="text" id="nome" name="nome" class="form__control" required aria-describedby="nome-help">
+                        <span id="nome-help" class="u-visually-hidden">Digite seu nome completo</span>
                     </div>
-                    <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" required aria-describedby="email-help">
-                        <span id="email-help" class="sr-only">Digite um endereço de e-mail válido</span>
+                    <div class="form__group">
+                        <label for="email" class="form__label">E-mail</label>
+                        <input type="email" id="email" name="email" class="form__control" required aria-describedby="email-help">
+                        <span id="email-help" class="u-visually-hidden">Digite um endereço de e-mail válido</span>
                     </div>
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" required aria-describedby="mensagem-help"></textarea>
-                        <span id="mensagem-help" class="sr-only">Digite sua mensagem</span>
+                    <div class="form__group">
+                        <label for="mensagem" class="form__label">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" class="form__control" required aria-describedby="mensagem-help"></textarea>
+                        <span id="mensagem-help" class="u-visually-hidden">Digite sua mensagem</span>
                     </div>
-                    <button type="submit" class="submit-button">Enviar Mensagem</button>
+                    <button type="submit" class="btn btn--primary contact__button">Enviar Mensagem</button>
                 </form>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Agência Criativa Web. Todos os direitos reservados.</p>
-            <ul class="footer-links">
-                <li><a href="#">Política de Privacidade</a></li>
-                <li><a href="#">Termos de Uso</a></li>
+
+    <footer class="site-footer">
+        <div class="u-container">
+            <p>&copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
+            <ul class="footer__links">
+                <li><a href="#" class="footer__link">Política de Privacidade</a></li>
+                <li><a href="#" class="footer__link">Termos de Uso</a></li>
             </ul>
         </div>
     </footer>
+
     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        menuToggle.addEventListener('change', () => {
-            navMenu.setAttribute('aria-expanded', menuToggle.checked);
-        });
+        const navToggle = document.getElementById('nav-toggle');
+        const navList = document.querySelector('.nav__list');
+        if (navToggle && navList) {
+            navList.setAttribute('aria-expanded', 'false');
+            navToggle.addEventListener('change', function () {
+                navList.setAttribute('aria-expanded', this.checked ? 'true' : 'false');
+            });
+        }
     </script>
 </body>
 </html>
